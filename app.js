@@ -88,8 +88,8 @@ const userCommand = prompt('enter a command');
     }
     else if (userCommand === 'update') {
       const updateEmployee = prompt('enter an employee');
-      const updateField = prompt('enter a field');
-      const updateValue = prompt('enter a value');
+      const updateField = prompt('enter a field to update (name, officeNum, phoneNum)');
+      const updateValue = prompt('enter new value (name, telephone number, or office number');
       for(i = 0; i < employeeList.length; i++) {
         if(employeeList[i].name === updateEmployee){
           employeeList[i][updateField] = updateValue;
@@ -101,7 +101,7 @@ const userCommand = prompt('enter a command');
     }
     else if (userCommand === 'add') {
       const addEmployee = prompt('enter a new employee');
-      const officeNumber = prompt('enter a office number');
+      const officeNumber = prompt('enter an office number');
       const teleNumber = prompt('enter a telephone number');
       employeeList.push({
         name: addEmployee, 
