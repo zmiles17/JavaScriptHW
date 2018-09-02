@@ -88,10 +88,7 @@ const userCommand = prompt('enter a command');
           render(employeeList[i].officeNum);
           render(employeeList[i].phoneNum);
         }
-        else {
-          alert('invalid input');
-          break;
-        }
+    
       }
     }
     else if (userCommand === 'update') {
