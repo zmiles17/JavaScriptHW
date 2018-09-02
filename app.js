@@ -73,6 +73,10 @@ const userCommand = prompt('enter a command');
         render(employeeList[i].officeNum);
         render(employeeList[i].phoneNum);
         }
+        else{
+          alert('employee is not in directory');
+          break;
+        }
       }
     }
     else if (userCommand === 'contains') {
@@ -83,6 +87,10 @@ const userCommand = prompt('enter a command');
           render(employeeList[i].name);
           render(employeeList[i].officeNum);
           render(employeeList[i].phoneNum);
+        }
+        else {
+          alert('invalid input');
+          break;
         }
       }
     }
@@ -96,6 +104,11 @@ const userCommand = prompt('enter a command');
           render(employeeList[i].name);
           render(employeeList[i].officeNum);
           render(employeeList[i].phoneNum);
+        }
+        else if(employeeList[i].name !== updateEmployee){
+          alert('invalid input');
+          break;
+          
         }
       }
     }
@@ -121,6 +134,10 @@ const userCommand = prompt('enter a command');
         if(employeeList[i].name === deleteEmployee){
           index = i;
         }
+        else {
+          alert('employee not in directory');
+          break;
+        }
       }
       employeeList.splice(index, 1);
       for (i = 0; i < employeeList.length; i++) {
@@ -128,7 +145,10 @@ const userCommand = prompt('enter a command');
         render(employeeList[i].officeNum);
         render(employeeList[i].phoneNum);
       }
+     
     }
-    
+    else{
+      alert('invalid command');
+    }
   
 
