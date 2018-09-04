@@ -97,10 +97,9 @@ const userCommand = prompt('enter a command');
           render(employeeList[i].name);
           render(employeeList[i].officeNum);
           render(employeeList[i].phoneNum);
-          
+          }
         }
       }
-    }
     else if (userCommand === 'add') {
       const addEmployee = prompt('enter a new employee');
       const officeNumber = prompt('enter an office number');
@@ -123,6 +122,10 @@ const userCommand = prompt('enter a command');
         if(employeeList[i].name === deleteEmployee){
           index = i;
         }
+        if(deleteEmployee !== employeeList[i].name){
+          alert('invalid input');
+          break;
+        }
       }
       employeeList.splice(index, 1);
       for (i = 0; i < employeeList.length; i++) {
@@ -130,7 +133,6 @@ const userCommand = prompt('enter a command');
         render(employeeList[i].officeNum);
         render(employeeList[i].phoneNum);
       }
-     
     }
     else{
       alert('invalid command');
