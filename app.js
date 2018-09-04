@@ -122,10 +122,6 @@ const userCommand = prompt('enter a command');
         if(employeeList[i].name === deleteEmployee){
           index = i;
         }
-        if(deleteEmployee !== employeeList[i].name){
-          alert('invalid input');
-          break;
-        }
       }
       employeeList.splice(index, 1);
       for (i = 0; i < employeeList.length; i++) {
